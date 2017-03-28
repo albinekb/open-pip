@@ -1,12 +1,8 @@
-#!/usr/bin/env node
 const spawn = require('child-process-promise').spawn
 const path = require('path')
 const fsp = require('fs-promise')
-const ora = require('ora')
 const pMinDelay = require('p-min-delay')
 const APP_PATH = path.join(__dirname, 'pip.app')
-
-const spinner = ora().start()
 
 const parseUrl = async (string) => {
   const url = path.resolve(path.join(process.cwd(), string))
@@ -31,10 +27,6 @@ const parseUrl = async (string) => {
   throw new Error(`Could not parse url: ${string}`)
 }
 
-const input = process.argv[2]
-
-if (!input) throw new Error('No url supplied')
-
 const kill = () => Promise.all([
   spawn('killall', ['pip']),
   spawn('killall', ['PIPAgent'])
@@ -55,44 +47,23 @@ async function didFail () {
   return exists
 }
 
-async function run () {
+async function open (input) {
   const parsed = await parseUrl(input.replace(/^"/g, '').replace(/"$/g, '').replace(/^'/g, '').replace(/'$/g, ''))
-  const killed = await kill()
-  if (killed) {
-    spinner.info(`Killed running pip.app`)
-  }
-  const cleaned = await cleanup()
-
-  if (cleaned) {
-    spinner.info('Cleaned up previous error')
-  }
-
-  spinner.info(`Attempting to open ${parsed} in pip.app 📺`)
+  await kill()
+  await cleanup()
 
   const runner = spawn('open', [APP_PATH, '--args', parsed])
-    .catch((err) => {
-      spinner.fail('App quit 🔴')
-      throw err
+    .catch((error) => {
+      console.error(error)
+      throw new Error('Error opening pip.app')
     })
 
   return pMinDelay(runner, 1000)
   .then(didFail)
   .then(failed => {
-    if (failed) return Promise.reject()
-    return Promise.resolve()
+    if (failed) return Promise.reject(false)
+    return Promise.resolve(true)
   })
 }
 
-// process.on('SIGINT', function () {
-//   cleanup()
-//   fkill(['pip', 'PIPAgent']).catch(() => console.log('Did not kill pip.app 💀'))
-// })
-
-run()
-  .then(() => {
-    spinner.stopAndPersist({ symbol: '🌟', text: 'Running' })
-  })
-  .catch((err) => {
-    spinner.fail('Something went wrong')
-    if (err) console.log(err)
-  })
+module.exports = open

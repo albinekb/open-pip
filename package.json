@@ -2,14 +2,8 @@
   "name": "open-pip",
   "productName": "open-pip",
   "version": "2.3.0",
-  "main": "open-pip.js",
+  "main": "index.js",
   "license": "MIT",
-  "bin": {
-    "open-pip": "cli.js"
-  },
-  "scripts": {
-    "ep": "electron-packager"
-  },
   "dependencies": {
     "args": "^2.4.0",
     "child-process-promise": "^2.2.0",
