@@ -9,20 +9,26 @@ const APP_PATH = path.join(__dirname, 'pip.app')
 const spinner = ora().start()
 
 const parseUrl = async (string) => {
-  if (string.startsWith('/')) {
-    const url = path.resolve(string)
+  const url = path.resolve(path.join(process.cwd(), string))
+  const magicUrl = path.join(process.cwd(), string).replace(/^\//g, '')
+
+  if (!string.startsWith('http')) {
+    if (path.isAbsolute(string) && await fsp.exists(string)) {
+      return `file:///${encodeURIComponent(string)}`
+    }
     if (await fsp.exists(url)) {
       return `file:///${encodeURIComponent(url.replace(/^\//g, ''))}`
-    } else {
-     return `file:///${encodeURIComponent(string.replace(/^\//g, ''))}`
+    } else if (await fsp.exists(magicUrl)) {
+      return `file:///${encodeURIComponent(magicUrl)}`
     }
+    throw new Error(`Could not find file at any of these locations:\n${magicUrl}\n${url}\n`)
   }
 
   if (string.startsWith('http')) {
     return string
   }
 
-  return `file:///${encodeURIComponent(string)}`
+  throw new Error(`Could not parse url: ${string}`)
 }
 
 const input = process.argv[2]
