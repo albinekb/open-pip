@@ -1,7 +1,7 @@
 {
   "name": "open-pip",
   "productName": "open-pip",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "main": "open-pip.js",
   "license": "MIT",
   "bin": {
