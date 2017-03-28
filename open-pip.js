@@ -8,9 +8,14 @@ const APP_PATH = path.join(__dirname, 'pip.app')
 
 const spinner = ora().start()
 
-const parseUrl = (string) => {
+const parseUrl = async (string) => {
   if (string.startsWith('/')) {
-    return `file:///${encodeURIComponent(string.replace(/^\//g, ''))}`
+    const url = path.resolve(string)
+    if (await fsp.exists(url) {
+      return `file:///${encodeURIComponent(url.replace(/^\//g, ''))}`
+    } else {
+     return `file:///${encodeURIComponent(string.replace(/^\//g, ''))}`
+    }
   }
 
   if (string.startsWith('http')) {
@@ -45,7 +50,7 @@ async function didFail () {
 }
 
 async function run () {
-  const parsed = parseUrl(input.replace(/^"/g, '').replace(/"$/g, '').replace(/^'/g, '').replace(/'$/g, ''))
+  const parsed = await parseUrl(input.replace(/^"/g, '').replace(/"$/g, '').replace(/^'/g, '').replace(/'$/g, ''))
   const killed = await kill()
   if (killed) {
     spinner.info(`Killed running pip.app`)
