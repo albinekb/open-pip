@@ -1,6 +1,5 @@
 {
   "name": "open-pip",
-  "productName": "open-pip",
   "version": "3.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -8,7 +7,6 @@
     "args": "^2.4.0",
     "child-process-promise": "^2.2.0",
     "fs-promise": "^2.0.2",
-    "ora": "^1.2.0",
     "p-min-delay": "^2.0.0"
   },
   "devDependencies": {}
