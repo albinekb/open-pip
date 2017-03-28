@@ -1,0 +1,24 @@
+{
+  "name": "open-pip",
+  "productName": "open-pip",
+  "version": "2.0.0",
+  "main": "open-pip.js",
+  "license": "MIT",
+  "bin": {
+    "open-pip": "open-pip.js"
+  },
+  "scripts": {
+    "ep": "electron-packager"
+  },
+  "dependencies": {
+    "args": "^2.4.0",
+    "child-process-promise": "^2.2.0",
+    "fs-promise": "^2.0.2",
+    "ora": "^1.2.0",
+    "p-min-delay": "^2.0.0"
+  },
+  "devDependencies": {
+    "electron": "^1.6.2",
+    "electron-packager": "^8.6.0"
+  }
+}
