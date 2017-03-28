@@ -5,7 +5,7 @@
   "main": "open-pip.js",
   "license": "MIT",
   "bin": {
-    "open-pip": "open-pip.js"
+    "open-pip": "cli.js"
   },
   "scripts": {
     "ep": "electron-packager"
@@ -17,8 +17,5 @@
     "ora": "^1.2.0",
     "p-min-delay": "^2.0.0"
   },
-  "devDependencies": {
-    "electron": "^1.6.2",
-    "electron-packager": "^8.6.0"
-  }
+  "devDependencies": {}
 }
