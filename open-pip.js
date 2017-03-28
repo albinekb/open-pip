@@ -11,7 +11,7 @@ const spinner = ora().start()
 const parseUrl = async (string) => {
   if (string.startsWith('/')) {
     const url = path.resolve(string)
-    if (await fsp.exists(url) {
+    if (await fsp.exists(url)) {
       return `file:///${encodeURIComponent(url.replace(/^\//g, ''))}`
     } else {
      return `file:///${encodeURIComponent(string.replace(/^\//g, ''))}`
