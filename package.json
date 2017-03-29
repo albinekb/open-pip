@@ -1,6 +1,6 @@
 {
   "name": "open-pip",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "main": "index.js",
   "license": "MIT",
   "description": "🎥 Module to open any url or path to a movie in macOS native picture-in-picture player",
