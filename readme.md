@@ -1,4 +1,5 @@
-# 🎥 open-pip
+# 🎥 open-pip [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 
 Module that will let you open a movie url/path in macOS native picture-in-picture player.
 
