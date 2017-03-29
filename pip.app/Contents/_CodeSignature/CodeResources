@@ -6,19 +6,19 @@
 	<dict>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		WYiF1S71evBo+tu0pnzevnN98RA=
+		cnCaPFuFPbbuP/b3wS1c1JYPMes=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<data>
-		sZ82ov+EKkgT4YYvhQMcNj/ayn0=
+		7gqJoAASUSbFCCBBO33rmwbY7Uc=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
 		<data>
-		RzRyiW5dJzLB7LemNWeVP6mwBlQ=
+		dRH742N1Ga/94sueoG4XmPMG6Mo=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<data>
-		xzmEqM9EyiYFUGCPRZ+zLic2tBs=
+		ZsqWxAE50E1Gy2EesHKTQ65ev0E=
 		</data>
 		<key>Resources/PIP/CDStructures.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Resources/PIP/PIPViewControllerDelegate.h</key>
 		<data>
-		V0jj7wEhQqPcSpA93kfADJGLjis=
+		uVbrv/I/b4vWCxysBbipCa4EvI4=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -190,28 +190,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vd3nIpfbJ9U+rS4iuCqs/e5BuMPqrCZJ67t8bMqlvlo=
+			0KqM5CX29KJQpFXA7uxHiBXpjg0Jz3umCzmC3mnMw8E=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9GWKBkObB85OA9ccAeB666OBFO4ho1fmlk7+uPzOSKM=
+			TMDP/fXRpNZp0gaOlW5ZD9COakBLgtupdtD4w5F2rlQ=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/NSWindowController-B8D-0N-5wS.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3NsPaN3Rtfa4hq2gT+xP5laeDqBXuNCi6P79PTxYipI=
+			Cr7CjgWGF2yu4mR93beNe30i17A3QTKcWIauifLkpPM=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2XZkCcuMNtKwZVUPPv4k9+sCDIaZd5PW5mRhDcmaSYw=
+			dSL+XS84rIb9IQk/h7IurZ0OZ4ZEARZ+6aAYMLMFIOw=
 			</data>
 		</dict>
 		<key>Resources/PIP/CDStructures.h</key>
@@ -260,7 +260,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Br0oP/4TSHvX+Nmbn9/ww1sfmducDUKk1nNreZ9KgGQ=
+			HQvRIqakbss4O7hYB1ksvV4n+tWqeRJJkDZwbjG7lSY=
 			</data>
 		</dict>
 	</dict>
