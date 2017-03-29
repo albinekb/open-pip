@@ -3,6 +3,13 @@
   "version": "3.0.2",
   "main": "index.js",
   "license": "MIT",
+  "description": "🎥 Module to open any url or path to a movie in macOS native picture-in-picture player",
+  "repository": "albinekb/open-pip",
+  "author": {
+    "name": "Albin Ekblom",
+    "email": "albinekblom@gmail.com",
+    "url": "https://github.com/albinekb"
+  },
   "dependencies": {
     "args": "^2.4.0",
     "child-process-promise": "^2.2.0",
