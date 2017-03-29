@@ -38,8 +38,10 @@ open('/path/to/movie.mp4')
 
 It uses child-process-promise to run this command:
 ```sh
-open [pip.app](https://github.com/albinekb/open-pip-app) --args <absolute-path-to-file>
+open pip.app --args <absolute-path-to-file>
 ```
+
+pip.app is a simple macOS app that reads the input argument and tries to load it in an AVPlayer
 
 Source for `pip.app` can be found here: https://github.com/albinekb/open-pip-app
 ### Credits
