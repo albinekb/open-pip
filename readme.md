@@ -44,6 +44,12 @@ open pip.app --args <absolute-path-to-file>
 pip.app is a simple macOS app that reads the input argument and tries to load it in an AVPlayer
 
 Source for `pip.app` can be found here: https://github.com/albinekb/open-pip-app
+
+### Related
+
+- [open-pip-cli](https://github.com/albinekb/open-pip-cli) - CLI for this module.
+- [open-pip-menubar](https://github.com/matthiaskern/open-pip-menubar) - A mac menubar app to open videos in PiP mode.
+
 ### Credits
 
 Inspiration came from this hack: https://github.com/steve228uk/PiPHack
