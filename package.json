@@ -2,8 +2,8 @@
   "name": "open-pip",
   "version": "3.0.5",
   "main": "index.js",
-  "engines" : {
-    "node" : ">=7.6.0"
+  "engines": {
+    "node": ">=7.6.0"
   },
   "license": "MIT",
   "description": "🎥 Module to open any url or path to a movie in macOS native picture-in-picture player",
@@ -14,9 +14,9 @@
     "url": "https://github.com/albinekb"
   },
   "dependencies": {
-    "args": "^2.4.0",
+    "args": "^5.0.1",
     "child-process-promise": "^2.2.0",
-    "fs-promise": "^2.0.2",
+    "fs-extra": "^9.0.0",
     "p-min-delay": "^2.0.0"
   },
   "devDependencies": {}
